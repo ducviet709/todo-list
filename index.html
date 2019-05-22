@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Todo List</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+	<div class="h-100">
+		<div class="row h-100">
+			<div class="d-flex col flex-column my-auto" style="height: 100%">
+				<div class="container d-flex flex-column justify-content-center align-items-center">
+          <div id="titleContainer">
+            <h1 onclick="onClickTitle()" id="todoTitle">Todo List</h1>
+          </div>
+					<ul id="todoList">
+					</ul>
+				</div>
+      </div>
+      
+			<div class="d-flex col flex-column my-auto justify-content-center align-items-center">
+				<input id="userInput" style="margin-bottom: 10px">
+				<button onclick="onButtonClick()">Add Todo</button>
+      </div>
+      
+			<div class="d-flex col flex-column my-auto justify-content-center align-items-center" style="height: 100%; padding: 0">
+        <div class="d-flex col flex-column my-auto justify-content-center align-items-center row" style="height: 50%">
+          <h1>Stale</h1>
+          <ul id="todoList">
+            <li>Write Code</li>
+            <li>Code...</li>
+          </ul>
+        </div>
+        <div class="d-flex col flex-column my-auto justify-content-center align-items-center" style="height: 50%">
+          <h1>Completed</h1>
+          <ul id="completedTodoList">
+            <li>Write Code</li>
+            <li>Code...</li>
+          </ul>
+        </div>
+      </div>
+
+		</div>
+	</div>
+	<script src="scripts.js"></script>
+</body>
+
+</html>
