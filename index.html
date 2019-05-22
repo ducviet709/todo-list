@@ -1,7 +1,5 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Todo List</title>
@@ -11,43 +9,36 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
-<body>
-	<div class="h-100">
-		<div class="row h-100">
-			<div class="d-flex col flex-column my-auto" style="height: 100%">
-				<div class="container d-flex flex-column justify-content-center align-items-center">
-          <div id="titleContainer">
-            <h1 onclick="onClickTitle()" id="todoTitle">Todo List</h1>
-          </div>
-					<ul id="todoList">
-					</ul>
-				</div>
-      </div>
-      
-			<div class="d-flex col flex-column my-auto justify-content-center align-items-center">
-				<input id="userInput" style="margin-bottom: 10px">
-				<button onclick="onButtonClick()">Add Todo</button>
-      </div>
-      
-			<div class="d-flex col flex-column my-auto justify-content-center align-items-center" style="height: 100%; padding: 0">
-        <div class="d-flex col flex-column my-auto justify-content-center align-items-center row" style="height: 50%">
-          <h1>Stale</h1>
-          <ul id="todoList">
-            <li>Write Code</li>
-            <li>Code...</li>
-          </ul>
-        </div>
-        <div class="d-flex col flex-column my-auto justify-content-center align-items-center" style="height: 50%">
-          <h1>Completed</h1>
-          <ul id="completedTodoList">
-            <li>Write Code</li>
-            <li>Code...</li>
-          </ul>
-        </div>
-      </div>
 
+<body>
+
+	<div class="container d-flex h-50 justify-content-center align-items-center">
+		<div class="h-100 col">
+			<div class="d-flex justify-content-center align-items-center h-50" id="titleContainer">
+				<h1 class="display-2 text-dark" id="todoTitle" contenteditable="true"><ion-icon name="logo-html5"></ion-icon> Todo List <ion-icon name="list-box"></ion-icon> </h1> 
+			</div>
+
+			<div class="d-flex my-auto justify-content-center align-items-center h-25 row">
+				<div class=" d-flex my-auto justify-content-center col-7">
+					<input class="form-control w-50"  placeholder="e.g. get a girlfriend ... " id="userInput">
+					<button id="addTodo-btn" class="btn btn btn-secondary" onclick="onButtonClick()">Add Todo</button>
+				</div>
+				<div class="custom-control custom-checkbox my-auto justify-content-center col">
+					<input class="custom-control-input" type="checkbox" id="checkbox" checked>
+					<label class="custom-control-label" for="checkbox">
+						Show not done tasks only
+					</label>
+				</div>
+
+			</div>
+			<div class="d-flex justify-content-center h-25">
+				<ul id="todoList" style="list-style-type:none;">
+				</ul>
+			</div>
 		</div>
 	</div>
+	</div>
+	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	<script src="scripts.js"></script>
 </body>
 
