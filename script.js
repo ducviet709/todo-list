@@ -1,5 +1,5 @@
 let masterTodoList = []
-masterTodoList = JSON.parse(localStorage.getItem("toDoList"));
+
 
 const clearTodoInput = () => document.getElementById('userInput').value = ''
 const clearOldTodoLists = () => document.getElementById('todoList').innerHTML = ''
@@ -31,7 +31,7 @@ const renderTodoLists = () => {
       document.getElementById('todoList').innerHTML = node
     } 
   })
-  localStorage.setItem("toDoList", JSON.stringify(masterTodoList));
+
 }
 
 const removeTodoItem = selectedTodoIdx => {
