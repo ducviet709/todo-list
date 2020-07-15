@@ -62,5 +62,3 @@ const onButtonClick = () => {
   clearTodoInput()
   renderTodoLists()
 }
-
-
